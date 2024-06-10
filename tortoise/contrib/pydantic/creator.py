@@ -425,7 +425,7 @@ def pydantic_model_creator(
                     (
                         j.get("nullable")
                         and not is_to_one_relation
-                        and field_type not in (IntField, TextField)
+                        and field_type not in (TextField,)  # IntField
                     )
                     or (exclude_readonly and j.get("readOnly"))
                 ):
