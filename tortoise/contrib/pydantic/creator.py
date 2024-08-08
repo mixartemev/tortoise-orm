@@ -393,8 +393,8 @@ def pydantic_model_creator(
                 )
 
         # Json fields
-        elif field_type is JSONField:
-            properties[fname] = Any
+        # elif field_type is JSONField:
+        #     properties[fname] = Any
         # Any other tortoise fields
         else:
             annotation = annotations.get(fname, None)
